@@ -6,6 +6,16 @@ public class NextGreaterElement {
 //		on the right side of x in the array. Elements for which no greater element exist, consider the next greater element as -1. 
 		
 		int arr[] = {4, 0, 9, 1, 3, 6};
+		
+		int ans[] = nextGreater(arr);
+
+		for(int i=0; i<ans.length; i++) {
+			System.out.print(ans[i]+ " ");
+		}
+
+	}
+	
+	public static int[] nextGreater(int arr[]){
 		int[] ans = new int[arr.length];
 		
 		Stack<Integer> stack = new Stack<>();
@@ -27,10 +37,7 @@ public class NextGreaterElement {
 				stack.push(arr[i]);
 		}
 		
-		for(int i=0; i<ans.length; i++) {
-			System.out.print(ans[i]+ " ");
-		}
-
+		return ans;
 	}
 
 }

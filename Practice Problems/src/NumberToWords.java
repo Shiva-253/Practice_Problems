@@ -5,6 +5,11 @@ public class NumberToWords {
 		
 //		Write a Java program to convert Numbers to words.
 		int num = 390239;
+		
+		no2words(num);
+	}
+	
+	public static void no2words(int num) {
 		StringBuilder sb = new StringBuilder();
 		String num_to_str = "";
 		
