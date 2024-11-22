@@ -3,11 +3,18 @@ import java.util.*;
 public class SortingNames {
 
     public static void main(String[] args) {
-        String names[] = {"Krishna", "Balaram", "Shiva", "Bharama", "Ganesh", "Durga", "Avinash", "Avinasa"};
+    	String names[] = {"Krishna", "Balaram", "Shiva", "Bharama", "Ganesh", "Durga", "Avinash", "Avinasa"};
+//        String names[] = {"Krishna"};
         
         ArrayList<String> names_list = sort(names, 0, names.length - 1);
         
         for (int i = 0; i < names_list.size(); i++) {
+            System.out.print(names_list.get(i) + " ");
+        }
+        System.out.println("\n");
+        System.out.println("Sorting the list in Descending Order\n");
+        
+        for (int i = names_list.size()-1; i >= 0; i--) {
             System.out.print(names_list.get(i) + " ");
         }
     }
@@ -73,11 +80,10 @@ public class SortingNames {
             
             return merge(newArr, 0, leftList.size() - 1, newArr.length - 1);
         } 
-        else {
-            ArrayList<String> singleElementList = new ArrayList<>();
-            singleElementList.add(arr[l]);
-            return singleElementList;
-        }
+            ArrayList<String> List = new ArrayList<>();
+            List.add(arr[l]);
+            return List;
+   
     }
 }
 
